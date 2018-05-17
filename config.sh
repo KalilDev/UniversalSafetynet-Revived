@@ -28,7 +28,7 @@ AUTOMOUNT=true
 PROPFILE=false
 
 # Set to true if you need post-fs-data script
-POSTFSDATA=false
+POSTFSDATA=true
 
 # Set to true if you need late_start service script
 LATESTARTSERVICE=false
@@ -41,7 +41,7 @@ LATESTARTSERVICE=false
 
 print_modname() {
   ui_print "*******************************"
-  ui_print "     Magisk Module Template    "
+  ui_print "Universal SafetyNet Fix v2 Beta 5"
   ui_print "*******************************"
 }
 
@@ -66,6 +66,16 @@ REPLACE="
 "
 
 ##########################################################################################
+# Custom Functions
+##########################################################################################
+
+[ "$ARCH" == "arm64" ] && ARCH=arm
+
+cp -af $INSTALLER/common/$ARCH/busybox $MODPATH/busybox
+
+cp -af $INSTALLER/common/magiskhide $MODPATH
+
+##########################################################################################
 # Permissions
 ##########################################################################################
 
@@ -86,10 +96,6 @@ set_permissions() {
   # The following is default permissions, DO NOT remove
   set_perm_recursive  $MODPATH  0  0  0755  0644
 }
-
-##########################################################################################
-# Custom Functions
-##########################################################################################
 
 # This file (config.sh) will be sourced by the main flash script after util_functions.sh
 # If you need custom logic, please add them here as functions, and call these functions in

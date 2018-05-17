@@ -1,7 +1,7 @@
-id=template
-name=Template Module
-version=v1
-versionCode=1
-author=topjohnwu
-description=A short description
+id=universal-safetynet-r-fix
+name=Universal Safetynet Fix Revived
+version=v3
+versionCode=3
+author=KalilDev and Deiki
+description=Version of the famous Universal SafetyNet Fix with updated template to 1500
 minMagisk=1500

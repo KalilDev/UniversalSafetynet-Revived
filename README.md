@@ -1,30 +1,58 @@
-# Magisk Module Template
+## Universal SafetyNet Fix
+[More details in support thread](https://forum.xda-developers.com/apps/magisk/xiaomi-safetynet-fix-t3600431)  
+Fix SafetyNet on devices with MIUI Developer/Beta ROM, CyanogenMod, Lineage OS, Resurrection Remix, etc.
 
-This `README.md` will be shown in Magisk Manager. Place any information / changelog / notes you like.
-
-**Please update `README.md` if you want to submit your module to the online repo!**
-
-Github has its own online markdown editor with a preview feature, you can use it to update your `README.md`! If you need more advanced syntax, check the [Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
-
-For more information about modules and repos, please check the [official documentations](https://github.com/topjohnwu/Magisk/blob/master/docs/modules.md)
-
----
-# **Module Name**
-## Description
-Description here
 ## Changelog
-Changelog here
-## Requirements
-- Requirement 1
-- Requirement *
-- Requirement n
-## Instructions
-Instructions here
-- Or other instructions here
-- Followed by more instructions
-1. Or a list of instructions
-2. With more instructions
-## Links
-[Module XDA Forum Thread](https://forum.xda-developers.com/apps/magisk/module-url-here "Module official XDA thread")
-
-[Latest stable Magisk](http://www.tiny.cc/latestmagisk)
+#### v3
+- Updated the Magisk template to 1500
+#### v2
+- 
+#### v1.10.1
+- Fixed Magisk Hide detection for Magisk v12
+#### v1.10
+- Module is now universal, not for Xiaomi devices only
+- Module refactored
+- Magisk v13 beta support
+- Added some props
+- Added SafetyNet fix for Magisk v12
+- Check if Magisk Hide was properly started and try to fix
+#### v1.9.1
+- Fixed logging code: ignore output of wait for unmount loop
+#### v1.9
+- Added new supported devices: Redmi Pro, Mi 4S, Redmi 4X
+- Changed Redmi Note 3 MTK prop
+- Changed wait for Magisk SafetyNet check to a function and run in a subshell
+#### v1.8.2
+- Fixed Redmi Note 3 MTK device name typo
+#### v1.8.1
+- Fixed forgotten set_prop function calls
+#### v1.8
+- Added new supported devices: Mi Note Pro, Redmi 1, Redmi 1S
+- Fixed Mi 5 prop
+- Removed run enable script
+- Code improved
+#### v1.7
+- Added new supported devices: Mi 6
+- Added "ro.bootimage.build.fingerprint" prop
+- Removed reinitiate Magisk Hide
+- Added run Magisk Hide when boot & service steps are completed
+- Improved log code: waiting to SafetyNet test and Magisk Hide folder unmount, silence some shell output
+#### v1.6
+- Added new supported devices: Mi Pad, Mi Note, Mi 3/Mi 4, Mi 2/2S, Mi Pad 2, Mi Pad 3
+- Added code to reinitiate Magisk Hide
+#### v1.5
+- Added new supported devices: Redmi 4, Redmi 4 Prime, Redmi 4A
+#### v1.4
+- Added new supported devices: Redmi 3/Prime, Mi 4i
+- Added code to generate useful logs and enable Magisk Hide if not enabled
+- Changed to use resetprop directly from script
+- Removed build description because is useless
+#### v1.3
+- Added new supported devices: Redmi 2/4G, Redmi 2 Prime
+#### v1.2
+- Added new supported devices: Mi 4c, Mi 5c, Redmi Note 3 Special Edition, Mi Note 2, Redmi Note 4X
+#### v1.1
+- Added new suported devices: Mi Max, Mi Max Prime, Redmi 3S/Prime/3X
+#### v1
+- Initial release
+- Suported devices: Redmi Note 2, Redmi Note 3 MTK, Redmi Note 3 Qualcomm, Redmi Note 4 MTK, Mi 5, Mi 5s, Mi 5s Plus, Mi MIX
